@@ -1,0 +1,44 @@
+// Package definition and imports
+package University
+
+import PersonAndOrganizationDatatypes
+
+/*
+   Example ontology module illustrating classes,
+   stereotypes and custom datatypes.
+*/
+kind Person {
+    cpf : CPFDataType { const }
+    email : EmailDataType
+    age : number { derived }
+    birthDate : date { const }
+    entryTime : time
+    lastUpdate : datetime
+    isActive : boolean
+    alternateNames : string [1..*] { ordered }
+    priorityCode : number { subsets generalCode }
+    primaryEmail : EmailDataType { redefines email }
+}
+
+collective Staff
+quantity Water
+quality Weight
+mode Disposition
+intrisicMode InternalState
+extrinsicMode LegalStatus
+subkind Student
+phase Child
+role Employee
+historicalRole ExStudent
+category LivingEntity
+mixin InsurableItem
+phaseMixin LiquidPhase
+roleMixin Customer
+historicalRoleMixin PastOwner
+event Graduation
+situation Conflict
+process Enrollment
+
+kind University {
+    functional-complexes
+}

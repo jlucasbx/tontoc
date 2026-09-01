@@ -1,0 +1,86 @@
+package UniversityRelations
+
+kind Department
+kind Organization
+kind Course
+
+collective Staff {
+    @componentOf
+    [1] <>-- [2..*] Department
+    @subCollectionOf
+    [1] <>-- [1] Staff
+}
+
+relation Department [1] --<> [1..*] Course
+relation has (Department [1] --<> [1..*] Course)
+relation has_parent (Person [1] <>-- [2] Person)
+relation is_part_of (ColorPart [1] <>-- [1] Color)
+
+@memberOf
+relation Staff [1..*] <>-- [2..*] Employee
+
+@material
+relation Person [1] <>-- [1] Organization
+
+@derivation
+relation Contract [1] <>-- [1] Person
+
+@comparative
+relation Person [1] <>-- [1] Person
+
+@mediation
+relation Enrollment [1..*] <>-- [1] Student
+
+@characterization
+relation Person [1] <>-- [1] Weight
+
+@externalDependence
+relation LegalStatus [1] <>-- [1] Law
+
+@subQualityOf
+relation ColorPart [1] <>-- [1] Color
+
+@composition
+relation Engine [1] <>-- [1] Car
+
+@aggregation
+relation Department [1] <>-- [1] University
+
+@constitution
+relation Clay [1] <>-- [1] Statue
+
+@instantiation
+relation PersonOne [1] <>-- [1] Person
+
+@termination
+relation Death [1] <>-- [1] Person
+
+@participational
+relation ProcessStep [1] <>-- [1] Process
+
+@participation
+relation Person [1] <>-- [1] Conference
+
+@historicalDependence
+relation Certificate [1] <>-- [1] Course
+
+@creation
+relation Author [1] <>-- [1] Book
+
+@manifestation
+relation Disease [1] <>-- [1] Symptom
+
+@bringsAbout
+relation Action [1] <>-- [1] State
+
+@triggers
+relation Event [1] <>-- [1] Process
+
+@inherence
+relation Mode [1] <>-- [1] Bearer
+
+@value
+relation Quality [1] <>-- [1] ValueSpace
+
+@formal
+relation NumberOne [1] <>-- [1] NumberTwo

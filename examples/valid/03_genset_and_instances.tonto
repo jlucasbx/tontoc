@@ -1,0 +1,42 @@
+package GeneralizationsAndInstances
+
+// Import base ontology types
+import BaseTypes
+
+/*
+   Generalization sets (gensets) and individual instances.
+   Supports single-line and multi-line comments.
+*/
+genset PhasesOfPerson disjoint complete where Child, Teenager, Adult
+genset GenderPartition disjoint where Male, Female
+
+disjoint complete genset AnimalClassification {
+    general Animal
+    specifics Dog, Cat, Bird
+}
+
+kind Person {
+    name : string
+    address : AddressDataType
+}
+
+phase Child
+phase Teenager
+phase Adult
+
+kind Animal
+subkind Dog
+subkind Cat
+subkind Bird
+
+kind Student {
+    mentor : Professor
+}
+
+kind Professor
+
+instance1 : Person
+student_01 : Student
+student123 : Student
+planet_earth_01 : Planet
+user_account_007 : UserAccount

@@ -1,0 +1,17 @@
+package InvalidIdentifiers
+
+kind Person1
+kind _Animal
+kind University_
+kind Bad__Class_Name
+
+subkind 1Dog
+
+role _child
+
+_instance1 : Person
+instance_with_trailing_ : Person
+
+relation has_parent_ [1] <>-- [1] Person
+relation _has_parent [1] <>-- [1] Person
+relation has_1_parent [1] <>-- [1] Person

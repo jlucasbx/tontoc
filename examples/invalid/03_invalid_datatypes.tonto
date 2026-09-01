@@ -1,0 +1,10 @@
+package InvalidCustomDataTypes
+
+kind Person {
+    cpf : CPF_DataType
+    phone : Phone1DataType
+    email : Email_Data_Type
+    zip : _ZipDataType
+    id : CustomDataType_
+    account : Account123DataType
+}

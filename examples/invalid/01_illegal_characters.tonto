@@ -1,0 +1,11 @@
+package InvalidCharacters
+
+kind Person {
+    $price : number
+    salary# : number
+    description^ : string
+    flag! : boolean
+    discount% : number
+    calculation& : number
+    equation = 10
+}
