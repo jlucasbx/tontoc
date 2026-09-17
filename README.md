@@ -9,6 +9,7 @@ Projeto desenvolvido para a disciplina de **Compiladores** do Departamento de Co
 ## Sumário
 
 - [Visão Geral](#visão-geral)
+- [Vídeo de Apresentação](#vídeo-de-apresentação)
 - [Arquitetura do Analisador](#arquitetura-do-analisador)
   - [Pipeline de Processamento](#pipeline-de-processamento)
   - [Separação de Responsabilidades](#separação-de-responsabilidades)
@@ -28,6 +29,14 @@ Projeto desenvolvido para a disciplina de **Compiladores** do Departamento de Co
 O **`tontoc`** é o *front-end* de um compilador para a linguagem TONTO e, no momento, encontra-se na fase de implementação do seu analisador léxico (*lexer*). O analisador processa arquivos com extensão `.tonto`, transformando o fluxo de caracteres de entrada em um fluxo ordenado de tokens com coordenadas dimensionais (linha e coluna), garantindo a conformidade com as regras gramaticais e convenções de nomenclatura estabelecidas.
 
 Em caso de divergências sintático-léxicas, o analisador aplica recuperação por descarte de caracteres ou interceptação de padrões malformados, emitindo relatórios diagnósticos com apontadores visuais e sugestões corretivas.
+
+---
+
+## Vídeo de Apresentação
+
+Demonstração prática e explicação detalhada da implementação do analisador léxico:
+
+🎥 **[Assistir ao Vídeo de Apresentação](https://fhf9m7hwgjvfn4py.public.blob.vercel-storage.com/video-apresentacao-01.mp4)**
 
 ---
 
